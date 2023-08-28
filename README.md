@@ -47,5 +47,14 @@ TacoBoutIt 🌮 is a culinary adventure dedicated to uncovering the best taco sp
 
 # Wireframes
 
+<img src="https://i.imgur.com/2pNNjeR.jpg">
+
+<img src="https://i.imgur.com/jHI02Yh.jpg">
+
+<img src="https://i.imgur.com/2ZZGJOz.jpg">
+
+
 
 # ERD
+
+<img src="https://i.imgur.com/6A7jFF9.jpg">
