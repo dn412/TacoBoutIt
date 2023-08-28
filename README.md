@@ -4,7 +4,7 @@
 
 # Screenshot
 
-<img src="blob:https://imgur.com/227aaf94-1267-4279-9713-040be04a18c3">
+<img src="https://i.imgur.com/RZEqeLF.png">
 
 
 # Technologies Used
