@@ -1,6 +1,6 @@
 # TacoBoutIt
 
-**[TacoBoutIt]** 🌮 is a culinary adventure dedicated to uncovering the best taco spots around the world. Beyond just a directory, this blog is a vibrant community space where taco enthusiasts can share reviews, stories, and spotlight their favorite local haunts.
+TacoBoutIt 🌮 is a culinary adventure dedicated to uncovering the best taco spots around the world. Beyond just a directory, this blog is a vibrant community space where taco enthusiasts can share reviews, stories, and spotlight their favorite local haunts.
 
 # Screenshot
 
@@ -42,7 +42,7 @@
 - As a registered user, I want to be able to submit my own review in the 'All Posts' page.
 - As a registered user, I want to see the locations of each review, because I can pan to visit those locations.
 - As a registered user, I want to see details of each review to see which location I'd like to try out.
-- As a returning user, I want the ability to log in using OAuth, because it's a secure and hassle-free method.
+- As a returning user, I want the ability to log in and log out using OAuth, because it's a secure and hassle-free method.
 
 
 # Wireframes
