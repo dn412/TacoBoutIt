@@ -1,0 +1,23 @@
+body {
+    background-color: lightsteelblue;
+    padding: 25px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    border: 1px solid grey;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+
+a > img {
+    height: 3vh;
+}
+
+.color-div {
+    height: 5vh;
+}
