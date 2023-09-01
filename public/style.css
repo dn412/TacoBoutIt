@@ -13,3 +13,11 @@ footer {
     display: flex;
     justify-content: center;
 }
+
+a > img {
+    height: 3vh;
+}
+
+.color-div {
+    height: 5vh;
+}

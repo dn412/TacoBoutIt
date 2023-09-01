@@ -27,7 +27,7 @@ middleware(app)
 //// Routes ////
 ////////////////
 app.get('/', (req, res) => {
-    res.send('welcome to the taco app')
+    res.redirect('/posts')
 })
 
 app.use('/', AuthRouter)
