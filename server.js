@@ -27,16 +27,17 @@ middleware(app)
 //// Routes ////
 ////////////////
 app.get('/', (req, res) => {
-    res.redirect('/post')
+    res.send('welcome to the taco app')
 })
 
 app.use('/', AuthRouter)
 app.use('/posts', PostRouter)
+
 
 //////////////////////////
 //// Server Listener  ////
 //////////////////////////
 const PORT = process.env.PORT
 app.listen(PORT, () => {
-    console.log('taco blog is ready to go')
+    console.log('taco app is ready to go')
 })

@@ -14,7 +14,7 @@ const db = mongoose.connection
 // bc this is a script, we open then eventually close our one time connection to the db
 db.on('open', () => {
     // array of starter resources(posts)
-    const seedPosts = [
+    const startPosts = [
         {
             title: "Gainesville,FL",
             content: "There's this taco joint that is awesome...",
@@ -30,9 +30,9 @@ db.on('open', () => {
     // when we seed the database, we remove everything from this collection
     Post.deleteMany({ owner: null })
         .then(() => {
-            // then add our seedPosts to the collection
+            // then add our startPosts to the collection
             // then close our connection to the db
-            Post.create(seedPosts)
+            Post.create(startPosts)
                 .then(data => {
                     console.log('these are the posts: \n', data)
                     db.close()
