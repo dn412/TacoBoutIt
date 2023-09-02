@@ -5,6 +5,7 @@
         <article class="col-5 border border-dark">
     
     <% if (post.author?._id.equals(user?._id)) {%>
+        <small>Created by: <%= post.author.name %></small>
         <div class="container-md">
             <a href="/posts/edit/<%= post._id %>" class="btn btn-info m-3">
                 Edit <%= post.title %>
@@ -41,7 +42,7 @@
                                 <small>author: <%= comm.author.name %></small>
                                 <% if (user && comm.author?._id == user.id) { %>
                                     <form action="/comments/<%= post._id%>/<%= comm._id %>?_method=DELETE" method="POST">
-                                        <input type="submit" class="btn btn-danger" value="X">
+                                        <input type="submit" class="btn btn-danger" value="Delete">
                                     </form>
                                 <% } %>
                             </div>

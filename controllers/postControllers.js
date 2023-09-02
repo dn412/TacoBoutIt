@@ -102,6 +102,8 @@ router.delete('/:id', checkLogin, (req, res) => {
 })
 
 // Show
+// .populate allows interaction with referenced objects
+//ex: shows author of the comments/posts
 router.get('/:id', (req, res) => {
     Post.findById(req.params.id)
         .populate('author')
