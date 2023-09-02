@@ -28,7 +28,7 @@ db.on('open', () => {
     ];
 
     // when we seed the database, we remove everything from this collection
-    Post.deleteMany({ owner: null })
+    Post.deleteMany({ author: null })
         .then(() => {
             // then add our startPosts to the collection
             // then close our connection to the db

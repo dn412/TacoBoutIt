@@ -3,19 +3,8 @@
 <div class="container-md">
     <div class="row justify-content-between">
         <article class="col-5 border border-dark">
-            <div class="border border-dark text-center"> 
-            <% if (post.readyToPost) {%>
-                    <h6>Ripe & Ready to Post</h6>
-            <% } else { %>
-                    <h6>Not Ripe Yet</h6>
-            <% } %>
-             
-    </div>
-    <% if (post.color) {%>
-        <div class="color-div border border-dark text-center" style="background-color: <%= post.color %>">
-        </div>
-    <% } %>
-    <% if (post.owner?._id.equals(user?._id)) {%>
+    
+    <% if (post.author?._id.equals(user?._id)) {%>
         <div class="container-md">
             <a href="/posts/edit/<%= post._id %>" class="btn btn-info m-3">
                 Edit <%= post.title %>
@@ -27,5 +16,43 @@
     <% } %>
 </article>
     </div>
+    <% if (user) { %>
+        <div class="col-md-6">
+            <form action="/comments/<%= post._id %>" method="POST">
+                <fieldset>
+                    <legend>Add Comment</legend>
+                    <label class="form-label">comment:</label>
+                    <input class="form-control mb-1" type="text" name="note">
+                    <input type="submit" class="btn btn-success" value="add comment">
+                </fieldset>
+            </form>
+        </div>
+    <% } %>
+    <hr>
+    <div class="container-md">
+        <% if (post.comments.length) { %>
+            <!-- loop the comments and display -->
+            <div class="container-sm m-4">
+                <% post.comments.forEach(comm => {%>
+                    <div class="card mb-4 shadow">
+                        <div class="card-body">
+                            <p><%= comm.note %></p>
+                            <div class="d-flex justify-content-between">
+                                <small>author: <%= comm.author.name %></small>
+                                <% if (user && comm.author?._id == user.id) { %>
+                                    <form action="/comments/<%= post._id%>/<%= comm._id %>?_method=DELETE" method="POST">
+                                        <input type="submit" class="btn btn-danger" value="X">
+                                    </form>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        <% } else { %>
+            <p>No Comments Yet</p>
+        <% } %>
     </div>
-    <%- include('../partials/footer') %>   
+</div>
+
+<%- include('../partials/footer') %>

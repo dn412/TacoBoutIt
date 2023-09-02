@@ -11,6 +11,7 @@ const middleware = require('./utils/middleware')
 // our routers/controllers will be imported here
 const AuthRouter = require('./controllers/authControllers')
 const PostRouter = require('./controllers/postControllers')
+const CommentRouter = require('./controllers/commentControllers')
 
 const app = express()
 
@@ -32,7 +33,7 @@ app.get('/', (req, res) => {
 
 app.use('/', AuthRouter)
 app.use('/posts', PostRouter)
-
+app.use('/comments', CommentRouter)
 
 //////////////////////////
 //// Server Listener  ////

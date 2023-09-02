@@ -3,12 +3,11 @@
 <div class="container-sm">
     <form action="/posts" method="POST">
         <fieldset>
-            <label class="form-label">Name:</label>
-            <input type="text" class="form-control" name="name" placeholder="What kind of fruit?" required>
-            <label class="form-label">Color:</label>
-            <input type="color" class="form-control" name="color" placeholder="What color is it?" required>
-            <label class="form-label">Ready To Post:</label>
-            <input type="checkbox" class="form-check-control" name="readyToPost" >
+            <label class="form-label">Title:</label>
+            <input type="text" class="form-control" name="title" placeholder="Enter location here" required>
+            <label class="form-label">Content:</label>
+            <textarea type="text" class="form-control" name="content" rows="5" cols="50" placeholder="Enter post text" required></textarea>
+          
             <br>
             <hr>
             <input type="submit" class="btn btn-success" value="Create New Post">

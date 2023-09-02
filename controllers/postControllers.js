@@ -31,10 +31,10 @@ router.get('/new', checkLogin, (req, res) => {
 
 // Create
 router.post('/', checkLogin, (req, res) => {
-    // need to assign owner
-    req.body.owner = req.user._id
-    // handle our checkbox
-    req.body.readyToPost = req.body.readyToPost === 'on' ? true : false
+    // need to assign author
+    req.body.author = req.user._id
+    
+   
 
     console.log(req.body)
     Post.create(req.body)
@@ -54,14 +54,31 @@ router.get('/edit/:id', checkLogin, (req, res) => {
         .then(post => {
             console.log('found this post', post)
 
-            res.send(`Edit page for ${post.title}`)
+            res.render('posts/edit', { post, title: `Edit ${post.title}`})
         })
         .catch(error => console.error)
 })
 
 
 // Update
+router.patch('/:id', checkLogin, (req, res) => {
+    
 
+    Post.findById(req.params.id)
+        .then(post => {
+            if (req.user && post.author == req.user.id) {
+                return post.updateOne(req.body)
+            } else {
+                res.send('something went wrong')
+            }
+        })
+        .then(data => {
+            console.log('what is returned from updateOne', data)
+
+            res.redirect('/posts')
+        })
+        .catch(error => console.error)
+})
 
 // Delete
 router.delete('/:id', checkLogin, (req, res) => {
@@ -69,7 +86,7 @@ router.delete('/:id', checkLogin, (req, res) => {
     Post.findById(req.params.id)
         // then we want to delete the post
         .then(post => {
-            if (req.user && post.owner == req.user.id) {
+            if (req.user && post.author == req.user.id) {
                 return post.deleteOne()
             } else {
                 res.send('something went wrong')
@@ -87,9 +104,11 @@ router.delete('/:id', checkLogin, (req, res) => {
 // Show
 router.get('/:id', (req, res) => {
     Post.findById(req.params.id)
+        .populate('author')
+        .populate('comments.author')
         .then(post => {
             console.log('found this post', post)
-            res.render("posts/show", { post, title:`${post.title}`})
+            res.render("posts/show", { post, title:`${post.name}`})
         })
         .catch(error => console.error)
 })
