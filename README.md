@@ -4,7 +4,7 @@ TacoBoutIt 🌮 is a culinary adventure dedicated to uncovering the best taco sp
 
 # Screenshot
 
-<img src="https://i.imgur.com/RZEqeLF.png">
+![!\[Alt text\] (<i!\[mages/tacoboutit.png\](public/images/tacoboutit.png)>)](public/images/tacoboutit.png) 
 
 
 # Technologies Used
@@ -47,14 +47,14 @@ TacoBoutIt 🌮 is a culinary adventure dedicated to uncovering the best taco sp
 
 # Wireframes
 
-<img src="https://i.imgur.com/2pNNjeR.jpg">
+![<img src="https://i.imgur.com/2pNNjeR.jpg">](public/images/allpostspage.png)
 
-<img src="https://i.imgur.com/jHI02Yh.jpg">
+![<img src="https://i.imgur.com/jHI02Yh.jpg">](public/images/mainpage.png)
 
-<img src="https://i.imgur.com/2ZZGJOz.jpg">
+![<img src="https://i.imgur.com/2ZZGJOz.jpg">](public/images/oauthpage.png)
 
 
 
 # ERD
 
-<img src="https://i.imgur.com/6A7jFF9.jpg">
+![<img src="https://i.imgur.com/6A7jFF9.jpg">](<public/images/erd list.png>)

@@ -28,7 +28,7 @@ middleware(app)
 //// Routes ////
 ////////////////
 app.get('/', (req, res) => {
-    res.redirect('/posts')
+    res.render('posts/home', { title: 'Home'})
 })
 
 app.use('/', AuthRouter)

@@ -1,17 +1,34 @@
+
 body {
-    background-color: lightsteelblue;
-    padding: 25px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    min-height: 100vh;
+    background-color: rgb(225, 198, 131);
+    /* padding: 25px; */
+    font: 14px "Architects Daughter", "Lucida Grande", Helvetica, Arial, sans-serif !important;
+    /* min-height: 100vh; */
     display: flex;
+    max-height: 85vh;
     flex-direction: column;
 }
-
+.container-md{
+    width: 100% !important
+}
 footer {
-    border: 1px solid grey;
+    /* border: 1px solid rgb(233, 77, 10); */
     margin-top: auto;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    /* position: absolute; */
+}
+footer p{
+
+    text-align: center;
+    margin: 15px auto
 }
 
 a > img {
@@ -20,4 +37,33 @@ a > img {
 
 .color-div {
     height: 5vh;
+}
+article{
+    background-color: white !important;
+    width: 360px !important
+}
+.allposts{
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    max-width: 450px 
+}
+.posts{
+    padding-left: 0 !important;
+    max-width: 450px 
+}
+.card-body p{
+    color: rgb(187, 205, 138);
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.homepage {
+    background-image: url('../images/taco char new.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;          
+    background-position: center;     
+    width: 100%;                     
+    height: 100vh;                  
+    background-attachment: fixed;    
+    text-align: center;
 }

@@ -110,7 +110,7 @@ router.get('/:id', (req, res) => {
         .populate('comments.author')
         .then(post => {
             console.log('found this post', post)
-            res.render("posts/show", { post, title:`${post.name}`})
+            res.render("posts/show", { post, title:`${post.title}`})
         })
         .catch(error => console.error)
 })
