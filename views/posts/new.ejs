@@ -1,11 +1,12 @@
+<body id="formBody">
 <%- include('../partials/nav') %>
 
-<div class="container-sm">
+<div class="container-sm formDiv">
     <form action="/posts" method="POST">
         <fieldset>
-            <label class="form-label">Title:</label>
+            <label class="form-label postlabel">Title:</label>
             <input type="text" class="form-control" name="title" placeholder="Enter location here" required>
-            <label class="form-label">Content:</label>
+            <label class="form-label postlabel">Content:</label>
             <textarea type="text" class="form-control" name="content" rows="5" cols="50" placeholder="Enter post text" required></textarea>
           
             <br>
@@ -16,3 +17,4 @@
 </div>
 
 <%- include('../partials/footer') %>
+</body>

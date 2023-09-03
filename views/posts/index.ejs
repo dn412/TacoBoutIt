@@ -1,10 +1,12 @@
+<body id="indexBody">
+
 <%- include('../partials/nav') %>
 
 <div class="container-md">
     <ul>
         <% posts.forEach(post => {%>
             <li>
-                <a href="/posts/<%= post._id %>">
+                <a class="post-item" href="/posts/<%= post._id %>">
                     <%= post.title %>
                 </a>
             </li>
@@ -13,3 +15,5 @@
 </div>
 
 <%- include('../partials/footer') %>
+
+</body>
