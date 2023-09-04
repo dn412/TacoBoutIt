@@ -36,14 +36,11 @@ router.post('/:postId', checkLogin, (req, res) => {
 })
 
 // edit
-// hint for subdoc update -> render a form similar to how we updated the post
 router.get('/edit/:id', checkLogin, (req, res) => {
     res.send('commend edit form')
 })
 
 // Update
-// update route should follow the same steps as delete, but with update instead of delete
-// look up update methods in the mongoose docs
 router.patch('/:id', checkLogin, (req, res) => {
     res.send('edit comment route')
 })

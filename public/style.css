@@ -1,48 +1,75 @@
 html, body {
- height: 100%
+    height: 100%
   
 }
+
 body{
     position: relative;
     min-height: 100%;
 }
 
-#indexBody{
+#body{
     font: 14px "Architects Daughter", "Lucida Grande", Helvetica, Arial, sans-serif !important;
-    background-image: url('../images/hand tacos.jpeg');
-    background-color: rgb(225, 198, 131);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-      height: 100vh;
-    margin: 0;
-    align-items: center;
-}
-#formBody{
-    font: 14px "Architects Daughter", "Lucida Grande", Helvetica, Arial, sans-serif !important;
-    background-image: url('../images/tacosblue.jpeg');
+    background-image: url('../images/taco char new.jpeg');
     background-color: rgb(225, 198, 131);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
     margin: 0;
-    align-items: center; 
+    align-items: center;
 }
-.formDiv{
-    margin: 18% auto;
-    max-width: 500px !important
+
+a > img {
+    height: 3vh;
 }
-.post-item{
-   font-size: 20px;
-   margin-bottom: 5px; 
-   font-weight: 600;
+
+.container-md{
+    width: 100% !important
 }
-.postlabel{
-    font-size: 22px;
-    font-weight: 600;
-    color: yellow
+footer {
+    margin-top: auto;
+    display: flex;
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 50px;
 }
+
+footer p{
+    text-align: center;
+    margin: 15px auto
+}
+
+.homepage {
+    color: black;
+    background-color: rgba(227, 224, 204, 0.416);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    text-align: center;
+    width: 60%;
+    margin: 15% auto;
+    opacity: 0.9
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.card-body p{
+    color: rgb(187, 205, 138);
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
 #editBody{
     font: 14px "Architects Daughter", "Lucida Grande", Helvetica, Arial, sans-serif !important;
     background-image: url('../images/tacosblue.jpeg');
@@ -54,88 +81,75 @@ body{
     margin: 0;
     align-items: center;
 }
-#body{
+
+#indexBody{
     font: 14px "Architects Daughter", "Lucida Grande", Helvetica, Arial, sans-serif !important;
-    background-image: url('../images/taco char new.jpeg');
+    background-image: url('../images/hand tacos.jpeg');
     background-color: rgb(225, 198, 131);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-      height: 100vh;
+    height: 100vh;
     margin: 0;
     align-items: center;
 }
-.container-md{
-    width: 100% !important
-}
-footer {
-    /* border: 1px solid rgb(233, 77, 10); */
-    margin-top: auto;
-    display: flex;
-    /* justify-content: center; */
-    background-color: black;
-    color: white;
-    text-align: center;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    height: 50px;
-    /* position: absolute; */
-}
-footer p{
 
-    text-align: center;
-    margin: 15px auto
+#formBody{
+    font: 14px "Architects Daughter", "Lucida Grande", Helvetica, Arial, sans-serif !important;
+    background-image: url('../images/tacosblue.jpeg');
+    background-color: rgb(225, 198, 131);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    align-items: center; 
 }
 
 #showBody{
     height: 200%;
     background-color: rgb(225, 198, 131);;
 }
-a > img {
-    height: 3vh;
-}
 
 .color-div {
     height: 5vh;
 }
-article{
-    background-color: white !important;
-    width: 360px !important
+
+.formDiv{
+    margin: 18% auto;
+    max-width: 500px !important
 }
+
+.posts{
+    padding-left: 0 !important;
+    max-width: 450px 
+}
+
+.post-item{
+   font-size: 20px;
+   margin-bottom: 5px; 
+   font-weight: 600;
+}
+
+.postlabel{
+    font-size: 22px;
+    font-weight: 600;
+    color: yellow
+}
+
 .allposts{
     padding-left: 0 !important;
     margin-left: 0 !important;
     max-width: 450px;
     margin-bottom: 100px; 
 }
-.posts{
-    padding-left: 0 !important;
-    max-width: 450px 
-}
-.card-body p{
-    color: rgb(187, 205, 138);
-    font-size: 16px;
-    text-transform: capitalize;
+
+article{
+    background-color: white !important;
+    width: 360px !important
 }
 
-.homepage {
-    color: black;
-    background-color: rgba(221, 207, 98, 0.413);
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    /* grid-column: 2 / span 3; */
-    /* grid-row: 3 / span 1;     */
-    text-align: center;
-    width: 60%;
-    margin: 15% auto;
-    opacity: 0.9
-}
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
+
+
+
+

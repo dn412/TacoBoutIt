@@ -5,19 +5,19 @@
     <div class="row justify-content-between">
         <article class="col-5 border border-dark">
 
-            <!-- Display the Post's Title -->
-            <h2><%= post.title %></h2>
+                <!-- Display the Post's Title -->
+                <h2><%= post.title %></h2>
         
-            <!-- Display the Post's Creation Date -->
-            <small>Posted on: <%= post.createdAt.toDateString() %></small>
+                    <!-- Display the Post's Creation Date -->
+                    <small>Posted on: <%= post.createdAt.toDateString() %></small>
         
-            <!-- Display the Post's Content -->
-            <p><%= post.content %></p>
+                        <!-- Display the Post's Content -->
+                         <p><%= post.content %></p>
         
-            <% if (post.author?._id.equals(user?._id)) {%>
-                <small>Created by: <%= post.author.name %></small>
-                <div class="container-md">
-                    <a href="/posts/edit/<%= post._id %>" class="btn btn-info text-white m-3">
+                                <% if (post.author?._id.equals(user?._id)) {%>
+                                <small>Created by: <%= post.author.name %></small>
+                            <div class="container-md">
+                        <a href="/posts/edit/<%= post._id %>" class="btn btn-info text-white m-3">
                         Edit <%= post.title %>
                     </a>
                     <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
@@ -26,19 +26,19 @@
                 </div>
             <% } %>
         </article>
-    </div><br>
-    <% if (user) { %>
-        <div class="col-md-6">
-            <form action="/comments/<%= post._id %>" method="POST">
-                <fieldset>
-                    <legend>Add Comment</legend>
-                    <label class="form-label">comment:</label>
-                    <input class="form-control mb-1" type="text" name="note">
-                    <input type="submit" class="btn btn-success" value="Add">
-                </fieldset>
-            </form>
-        </div>
-    <% } %>
+            </div><br>
+                <% if (user) { %>
+                     <div class="col-md-6">
+                        <form action="/comments/<%= post._id %>" method="POST">
+                            <fieldset>
+                                <legend>Add Comment</legend>
+                                    <label class="form-label">comment:</label>
+                                    <input class="form-control mb-1" type="text" name="note">
+                             <input type="submit" class="btn btn-success" value="Add">
+                        </fieldset>
+                    </form>
+                </div>
+            <% } %>
     <hr>
     <h3>All Comments</h3>
     <div class="container-md allposts">

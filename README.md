@@ -40,21 +40,22 @@ TacoBoutIt 🌮 is a culinary adventure dedicated to uncovering the best taco sp
 - As a visitor, I want the option to register and log in, because i'm a taco enthusiast and want to become part of the taco community.
 - As a registered user, I want to see personalized options on the home page, because it makes my browsing experience unique.
 - As a registered user, I want to be able to submit my own review in the 'All Posts' page.
-- As a registered user, I want to see the locations of each review, because I can pan to visit those locations.
+- As a registered user, I want to see the locations of each review, because I can plan to visit those locations.
 - As a registered user, I want to see details of each review to see which location I'd like to try out.
 - As a returning user, I want the ability to log in and log out using OAuth, because it's a secure and hassle-free method.
 
 
 # Wireframes
 
-![<img src="https://i.imgur.com/2pNNjeR.jpg">](public/images/allpostspage.png)
+![Alt text](public/images/mainpage.png)
 
-![<img src="https://i.imgur.com/jHI02Yh.jpg">](public/images/mainpage.png)
+![Alt text](public/images/oauthpage.png)
 
-![<img src="https://i.imgur.com/2ZZGJOz.jpg">](public/images/oauthpage.png)
+![Alt text](public/images/createpost.png)
 
+![Alt text](public/images/allpostspage.png)
 
 
 # ERD
 
-![<img src="https://i.imgur.com/6A7jFF9.jpg">](<public/images/erd list.png>)
+![Alt text](public/images/ERDtaco.png)

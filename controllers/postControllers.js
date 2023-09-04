@@ -7,7 +7,6 @@ require('dotenv').config()
 const Post = require('../models/post')
 const checkLogin = require('../utils/ensureLoggedIn')
 
-// const axios = require('axios')
 
 const router = express.Router()
 
