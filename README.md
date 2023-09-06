@@ -14,11 +14,12 @@ TacoBoutIt 🌮 is a culinary adventure dedicated to uncovering the best taco sp
 - CSS
 - Mongoose
 - Express
+- Oauth
 
 # Getting Started
 
-[Click to View Project Planning](your Trello url here)
-[Click to view blog here!](your deployment url here)
+[Click to view blog here!](https://tacoboutit.fly.dev)
+
 - Install Instructions:
 1. Fork this repository and clone it to your local repository.
 2. Make your changes and improvements. Please ensure you stick to the coding standards and guidelines.
@@ -59,3 +60,5 @@ TacoBoutIt 🌮 is a culinary adventure dedicated to uncovering the best taco sp
 # ERD
 
 ![Alt text](public/images/ERDtaco.png)
+
+

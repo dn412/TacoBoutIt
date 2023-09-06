@@ -1,75 +1,75 @@
-<body id="showBody">
-<%- include('../partials/nav') %>
+    <body id="showBody">
+    <%- include('../partials/nav') %>
 
-<div class="container-md">
-    <div class="row justify-content-between">
-        <article class="col-5 border border-dark">
+    <div class="container-md">
+        <div class="row justify-content-between">
+            <article class="col-5 border border-dark">
 
-                <!-- Display the Post's Title -->
-                <h2><%= post.title %></h2>
-        
-                    <!-- Display the Post's Creation Date -->
-                    <small>Posted on: <%= post.createdAt.toDateString() %></small>
-        
-                        <!-- Display the Post's Content -->
-                         <p><%= post.content %></p>
-        
-                                <% if (post.author?._id.equals(user?._id)) {%>
-                                <small>Created by: <%= post.author.name %></small>
-                            <div class="container-md">
-                        <a href="/posts/edit/<%= post._id %>" class="btn btn-info text-white m-3">
-                        Edit <%= post.title %>
-                    </a>
-                    <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
-                        <input type="submit" class="btn btn-danger m-3" value="Delete <%= post.title %>">
-                    </form>
-                </div>
-            <% } %>
-        </article>
-            </div><br>
-                <% if (user) { %>
-                     <div class="col-md-6">
-                        <form action="/comments/<%= post._id %>" method="POST">
-                            <fieldset>
-                                <legend>Add Comment</legend>
-                                    <label class="form-label">comment:</label>
-                                    <input class="form-control mb-1" type="text" name="note">
-                             <input type="submit" class="btn btn-success" value="Add">
-                        </fieldset>
-                    </form>
-                </div>
-            <% } %>
-    <hr>
-    <h3>All Comments</h3>
-    <div class="container-md allposts">
-        <% if (post.comments.length) { %>
-            <!-- loop the comments and display -->
-            <div class="container-sm posts">
-                <% post.comments.forEach(comm => {%>
-                    <div class="card mb-4 shadow">
-                        <div class="card-body">
-                            <p><%= comm.note %></p>
-        
-                            <!-- Display the Comment's Creation Date -->
-                            <small>Commented on: <%= comm.createdAt.toDateString() %></small>
-        
-                            <div class="d-flex justify-content-between">
-                                <small>Author: <%= comm.author.name %></small>
-                                <% if (user && comm.author?._id == user.id) { %>
-                                    <form action="/comments/<%= post._id%>/<%= comm._id %>?_method=DELETE" method="POST">
-                                        <input type="submit" class="btn btn-danger" value="Delete">
-                                    </form>
-                                <% } %>
+                    <!-- Display the Post's Title -->
+                    <h2><%= post.title %></h2>
+            
+                        <!-- Display the Post's Creation Date -->
+                        <small>Posted on: <%= post.createdAt.toDateString() %></small>
+            
+                            <!-- Display the Post's Content -->
+                            <p><%= post.content %></p>
+            
+                                    <% if (post.author?._id.equals(user?._id)) {%>
+                                    <small>Created by: <%= post.author.name %></small>
+                                <div class="container-md">
+                            <a href="/posts/edit/<%= post._id %>" class="btn btn-info text-white m-3">
+                            Edit <%= post.title %>
+                        </a>
+                        <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+                            <input type="submit" class="btn btn-danger m-3" value="Delete <%= post.title %>">
+                        </form>
+                    </div>
+                <% } %>
+            </article>
+                </div><br>
+                    <% if (user) { %>
+                        <div class="col-md-6">
+                            <form action="/comments/<%= post._id %>" method="POST">
+                                <fieldset>
+                                    <legend>Add Comment</legend>
+                                        <label class="form-label">comment:</label>
+                                        <input class="form-control mb-1" type="text" name="note">
+                                <input type="submit" class="btn btn-success" value="Add">
+                            </fieldset>
+                        </form>
+                    </div>
+                <% } %>
+        <hr>
+        <h3>All Comments</h3>
+        <div class="container-md allposts">
+            <% if (post.comments.length) { %>
+                <!-- loop the comments and display -->
+                <div class="container-sm posts">
+                    <% post.comments.forEach(comm => {%>
+                        <div class="card mb-4 shadow">
+                            <div class="card-body">
+                                <p><%= comm.note %></p>
+            
+                                <!-- Display the Comment's Creation Date -->
+                                <small>Commented on: <%= comm.createdAt.toDateString() %></small>
+            
+                                <div class="d-flex justify-content-between">
+                                    <small>Author: <%= comm.author.name %></small>
+                                    <% if (user && comm.author?._id == user.id) { %>
+                                        <form action="/comments/<%= post._id%>/<%= comm._id %>?_method=DELETE" method="POST">
+                                            <input type="submit" class="btn btn-danger" value="Delete">
+                                        </form>
+                                    <% } %>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                <% }) %>
-            </div>
-        <% } else { %>
-            <p>No Comments Yet</p>
-        <% } %>
+                    <% }) %>
+                </div>
+            <% } else { %>
+                <p>No Comments Yet</p>
+            <% } %>
+        </div>
     </div>
-</div>
 
-<%- include('../partials/footer') %>
-</body>
+    <%- include('../partials/footer') %>
+    </body>
